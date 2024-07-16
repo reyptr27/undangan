@@ -4,12 +4,20 @@ html {
 }
 
 body {
-    font-family: 'Josefin Sans', sans-serif !important;
+    font-family: Montserrat, sans-serif !important;
     padding: 0 !important;
 }
 
+.progress-bar {
+  background-color: rgb(198, 23, 23);
+}
+
 .font-esthetic {
-    font-family: Sacramento, cursive !important;
+    font-family: Great Vibes, cursive !important;
+}
+
+.font-text {
+    font-family: Montserrat, cursive !important;
 }
 
 .font-arabic {
@@ -46,11 +54,25 @@ body {
 }
 
 .loading-page {
-    position: fixed;
-    inset: 0 !important;
-    width: 100%;
-    height: 100%;
-    z-index: 1056 !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  inset: 0 !important;
+  z-index: 1056 !important;
+}
+
+@media (max-width: 768px) {
+  .loading-page {
+    background-image: url('../assets/images/bg.png');
+  }
+}
+
+@media (min-width: 769px) {
+  .loading-page {
+    background-image: url('../assets/images/bg-web.png');
+  }
 }
 
 .card-body {
