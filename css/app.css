@@ -24,6 +24,14 @@ body {
     font-family: 'Noto Naskh Arabic', serif !important;
 }
 
+.nav-link .fa-solid {
+    color: inherit; /* Ensure icon color inherits parent's color */
+}
+
+.nav-link.active .fa-solid {
+    color: rgb(198, 23, 23); /* Adjust this color as needed */
+}
+
 .img-crop {
     width: 14rem;
     height: 14rem;
@@ -163,4 +171,45 @@ footer {
 
 .color-theme-black {
     color: black;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+  }
+}
+
+.pulse-button {
+  animation: pulse 2s infinite;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.wiggle-button {
+  animation: wiggle 1s ease-in-out infinite;
 }
